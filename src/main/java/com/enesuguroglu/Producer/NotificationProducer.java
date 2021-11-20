@@ -19,7 +19,7 @@ public class NotificationProducer {
     @Value("${rabbit.exchange.name}")
     private String exchangeName;
 
-    @PostConstruct
+  /*  @PostConstruct
     public void init(){
         Notification notification = new Notification();
         notification.setNotificationId(UUID.randomUUID().toString());
@@ -28,7 +28,7 @@ public class NotificationProducer {
         notification.setSeen(Boolean.FALSE);
 
         sendToQueue(notification);
-    }
+    } */
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
